@@ -1,0 +1,14 @@
+/* Write your code below. Good luck! 🙂 */
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.76;
+
+// Calculate BMI
+const bmiMark = massMark / (heightMark ** 2);
+const bmiJohn = massJohn / (heightJohn ** 2);
+
+// Output results
+console.log(bmiMark);
+console.log(bmiJohn);
