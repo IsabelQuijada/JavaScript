@@ -273,25 +273,25 @@
 
 //OBJECTS
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-}
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// }
 
-console.log(jonas);
+// console.log(jonas);
 
 
-//DOT VS BRACKET NOTATION
+// //DOT VS BRACKET NOTATION
 
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey])
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey])
 
 // console.log(jonas.'last' + nameKey);//This will not work
 
@@ -305,12 +305,184 @@ console.log(jonas['last' + nameKey])
 // }
 
 
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasschmedtman';
-console.log(jonas);
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman';
+// console.log(jonas);
 
 
-//Challenge
-// "Jonas has 3 friends, and this best friend is called Michael"
+// //Challenge
+// // "Jonas has 3 friends, and this best friend is called Michael"
 
-console.log(`${jonas.firstName} has ${jonas.friends.length } friends, and his best friend is called ${jonas.friends[0]}.` )
+// console.log(`${jonas.firstName} has ${jonas.friends.length } friends, and his best friend is called ${jonas.friends[0]}.` )
+
+
+// OBJECT METHODS
+
+// const jonas = {
+//     firstName: "Jonas",
+//     lastName: "Atkins",
+//     birthYear: 2025 - 1994,
+//     job: "writer",
+//     friends: ["Hugo", "Paco", "Luis"],
+//     hasDriversLicence: false,
+
+    // calcAge: function(birthYear) {
+    //     return 2025 - birthYear
+    // }
+
+    // calcAge: function() {
+    //     console.log(this)
+    //     return 2025 - this.birthYear
+    // }
+
+//     calcAge: function() {
+//         this.age =  2025 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function() {
+// return `${this.firstName} is ${this.calcAge()} - years old,  and he has ${this.hasDriversLicence ? "a" : "no"} drivers licence. `
+//     }
+    
+// };
+
+
+// console.log(jonas['calcAge'](1999));
+
+// console.log(jonas.calcAge());
+
+
+// console.log(jonas.age());
+// console.log(jonas.age());
+// console.log(jonas.age());
+
+//CHALLENGE
+//"Jonas is  a 46 year old teacher, and he has a drivers licence."
+
+// console.log(jonas.getSummary());
+
+
+
+// CHALLENGE #3
+// Let's go back to Mark and John comparing their BMIs!
+
+// This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your tasks:
+
+// For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+// Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property called bmi (lowercase), and also return it from the method.
+
+// Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
+
+
+// const mark = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+
+//     calcBMI: function() {
+//         this.bmi = this.mass /(this.height * this.height)
+//         return this.bmi;
+//     }
+
+// };
+
+// const john = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+
+//     calcBMI: function() {
+//         this.bmi = this.mass /(this.height * this.height)
+//         return this.bmi;
+//     }
+// };
+
+
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
+
+// if (mark.bmi > john.bmi) {
+//     console.log(`${mark.fullName}'s BMI (${mark.bmi.toFixed(1)}) is higher than ${john.fullName}'s (${john.bmi.toFixed(1)})!`);
+// } else if (john.bmi > mark.bmi) {
+//     console.log(`${john.fullName}'s BMI (${john.bmi.toFixed(1)}) is higher than ${mark.fullName}'s (${mark.bmi.toFixed(1)})!`);
+// } else {
+//     console.log(`Both have the same BMI (${mark.bmi.toFixed(1)})!`);
+// }
+
+
+// ITERATION: THE FOR LOOP
+
+// console.log("Lifting Weights rep 1 🏋");
+// console.log("Lifting Weights rep 1 🏋");
+// console.log("Lifting Weights rep 1 🏋");
+// console.log("Lifting Weights rep 1 🏋");
+// console.log("Lifting Weights rep 1 🏋");
+// console.log("Lifting Weights rep 1 🏋");
+
+// Keeps running while condigion is true
+
+// for (let rep = ;  rep <= 10; rep++ ) {
+//     console.log(`Lifting Weights rep ${rep} 🏋`)
+// }
+
+
+// const isaArray = [
+//     'Isa',
+//     'Arriola',
+//     2025 - 1997,
+//     'teacher',
+//     ['Hugo', 'Paco', 'Luis'],
+//     true
+// ];
+
+// const types = [];
+
+// console.log(isaArray[0]);
+// console.log(isaArray[1]);
+// console.log(isaArray[2]);
+// console.log(isaArray[3]);
+// console.log(isaArray[4]);
+// // isa[5] does not exist
+
+
+// for (let i = 0; i< isaArray.length ;i++ ){
+//     //Reading from isaArray
+//     console.log(isaArray[i], typeof isaArray[i]);
+
+
+//     // Filling types array
+//    // types[i] = typeof isaArray[i];
+//    types.push(typeof isaArray[i]);
+// };
+
+// console.log(types);
+
+// const years = [1998, 1967, 2004, 2018];
+// const ages = [];
+
+// for (let i = 0; i< years.length; i++){
+//     ages.push(2025 - years[i])
+// }
+// console.log(ages)
+
+// //continue
+// console.log ("--- ONLY STRINGS --")
+// for (let i = 0; i < isaArray.length; i++ ){
+//     if(typeof isaArray[i] !== 'string') continue;
+
+//     console.log(isaArray[i], typeof isaArray[i]);
+// }
+
+// console.log ("--- BREAK WITH NUMBER --")
+// for (let i = 0; i < isaArray.length; i++ ){
+//     if(typeof isaArray[i] !== 'number') break;
+
+//     console.log(isaArray[i], typeof isaArray[i]);
+// }
